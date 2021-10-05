@@ -8,27 +8,35 @@
     tools:context=".LoginActivity">
 
     <TextView
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Login" />
 
     <EditText
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
         android:hint="@string/login_name"
-        android:inputType="textPassword" />
+        android:inputType="textEmailAddress" />
 
     <TextView
+        android:id="@+id/tvPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Password" />
 
     <EditText
+        android:id="@+id/etPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
+        android:inputType="textPassword" />
 
-        android:inputType="textEmailAddress" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_Button"/>
+
 
 </LinearLayout>

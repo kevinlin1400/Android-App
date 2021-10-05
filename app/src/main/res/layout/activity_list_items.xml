@@ -7,9 +7,9 @@
     android:columnCount="2"
     android:rowCount="2"
     android:layout_columnWeight="1"
-    android:layout_gravity="fill"
+    android:layout_gravity="fill">
 
-    >
+
     <RadioButton
         android:id="@+id/RadioButton"
         android:layout_width="wrap_content"
@@ -32,12 +32,14 @@
         android:layout_height="wrap_content"
         android:text="@string/Switch"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="80dp" />
+        tools:layout_editor_absoluteY="80dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <ImageButton
         android:id="@+id/ImageButton"
         android:layout_width="141dp"
         android:layout_height="59dp"
+        android:src="@android:drawable/ic_menu_camera"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="80dp" />
 
