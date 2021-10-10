@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     protected static final String ACTIVITY_NAME = "MainActivity";
 
-    Button button;
+    Button button, chat;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
         button = (Button) findViewById(R.id.button);
+        chat = (Button) findViewById(R.id.start_chat);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +38,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+                try {
+                    startActivityForResult(intent, 10);
+                } catch (ActivityNotFoundException e) {
+                    Log.i(ACTIVITY_NAME, "No Activity Found!");
+                }
+
+            }
+        });
+
     }
 
     @Override
