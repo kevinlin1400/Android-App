@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected static final String ACTIVITY_NAME = "MainActivity";
 
-    Button button, chat;
+    Button button, chat, toolbar;
 
 
     @Override
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         button = (Button) findViewById(R.id.button);
         chat = (Button) findViewById(R.id.start_chat);
+        toolbar = (Button) findViewById(R.id.toolbar);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +45,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.i(ACTIVITY_NAME, "User clicked Start Chat");
                 Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+                try {
+                    startActivityForResult(intent, 10);
+                } catch (ActivityNotFoundException e) {
+                    Log.i(ACTIVITY_NAME, "No Activity Found!");
+                }
+
+            }
+        });
+
+        toolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent(MainActivity.this, TestToolbar.class);
                 try {
                     startActivityForResult(intent, 10);
                 } catch (ActivityNotFoundException e) {

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.androidassignments">
+    package="com.example.androidassignments" >
 
     <uses-permission
         android:name="android.hardware.camera"
         android:requiredFeature="true" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
 
     <application
         android:allowBackup="true"
@@ -14,27 +13,32 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidAssignments">
+        android:theme="@style/Theme.AndroidAssignments" >
+        <activity
+            android:name=".TestToolBar"
+            android:exported="true"
+            android:label="@string/title_activity_test_tool_bar"
+            android:theme="@style/Theme.AndroidAssignments.NoActionBar" />
 
         <meta-data
-            android:name = "android.support.MainActivity"
-            android:value = ".ChatWindow" />
+            android:name="android.support.MainActivity"
+            android:value=".ChatWindow" />
 
         <activity
             android:name=".ChatWindow"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:parentActivityName=".LoginActivity"/>
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".ListItemsActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
