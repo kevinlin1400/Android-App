@@ -15,27 +15,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.androidassignments.databinding.ActivityTestToolbarBinding;
+//import com.example.androidassignments.databinding.ActivityTestToolbarBinding;
 
 public class TestToolbar extends AppCompatActivity {
 
-    private ActivityTestToolbarBinding binding;
+    //private ActivityTestToolbarBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        binding = ActivityTestToolbarBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        setSupportActionBar(binding.toolbar);
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Hello There", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//
+//        binding = ActivityTestToolbarBinding.inflate(getLayoutInflater());
+//        setContentView(binding.getRoot());
+//        setSupportActionBar(binding.toolbar);
+//
+//        binding.fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Hello There", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
     }
 
     public boolean onCreateOptionsMenu (Menu m){
